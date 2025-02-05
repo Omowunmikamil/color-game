@@ -82,7 +82,7 @@ export default function ColorGuessingGame() {
           style={{ backgroundColor: targetColor }}
           data-testid="colorBox"
         ></div>
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-6 justify-center mb-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 gap-y-6 justify-center mb-6">
           {shades.map((shade) => (
             <button
               key={shade}
@@ -94,7 +94,7 @@ export default function ColorGuessingGame() {
           ))}
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between gap-3 md:gap-8 mb-6">
+        <div className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-2 md:gap-8 mb-6">
           <p className="text-lg font-medium" data-testid="gameStatus">
             {gameStatus}
           </p>
