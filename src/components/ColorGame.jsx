@@ -69,14 +69,14 @@ export default function ColorGuessingGame() {
   };
 
   return (
-    <div className="flex flex-col items-center min-h-screen bg p-6">
+    <div className="flex flex-col items-center max-h-screen bg px-10 py-4">
       <h1
         className="text-2xl sm:text-4xl text-center font-bold mb-6 pb-3 border-b w-full "
         data-testid="gameInstructions"
       >
         Guess the correct shade!
       </h1>
-      <div className="flex flex-col items-center mt-10">
+      <div className="flex flex-col items-center my-10">
         <div
           className="size-36 mb-6 border-4 border-gray-800 rounded-xl "
           style={{ backgroundColor: targetColor }}
