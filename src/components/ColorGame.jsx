@@ -32,7 +32,7 @@ export default function ColorGuessingGame() {
       return () => clearTimeout(timer);
     } else if (timeLeft === 0) {
       setGameOver(true);
-      setGameStatus(`Game Over! Your Score: ${score}`);
+      setGameStatus(`Game Over! ❌ Your Score: ${score}`);
       if (score > highestScore) {
         setHighestScore(score);
       }
@@ -78,11 +78,11 @@ export default function ColorGuessingGame() {
       </h1>
       <div className="flex flex-col items-center mt-10">
         <div
-          className="size-36 mb-4 border-4 border-gray-800 rounded-xl "
+          className="size-36 mb-6 border-4 border-gray-800 rounded-xl "
           style={{ backgroundColor: targetColor }}
           data-testid="colorBox"
         ></div>
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-6 justify-center gap-4 mb-4">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-6 justify-center mb-6">
           {shades.map((shade) => (
             <button
               key={shade}
@@ -94,7 +94,7 @@ export default function ColorGuessingGame() {
           ))}
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between gap-3 md:gap-8">
+        <div className="flex flex-col md:flex-row justify-between gap-3 md:gap-8 mb-6">
           <p className="text-lg font-medium" data-testid="gameStatus">
             {gameStatus}
           </p>
@@ -110,7 +110,7 @@ export default function ColorGuessingGame() {
         </div>
         <button
           onClick={() => startNewGame(true)}
-          className="mt-4 px-8 py-2 bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 text-white rounded-full cursor-pointer transform hover:scale-105 hover:shadow-lg active:scale-90 transition-all duration-200 ease-out"
+          className="mt-6 px-8 py-2 bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 text-white rounded-full cursor-pointer transform hover:scale-105 hover:shadow-lg active:scale-90 transition-all duration-200 ease-out"
           data-testid="newGameButton"
         >
           New Game
